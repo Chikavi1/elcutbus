@@ -7,3 +7,5 @@
 - Jairo Ruelas
 - emanuel lupercio
 - Juan Tapia
+
+![udg](http://www.cusur.udg.mx/es/sites/default/files/adjuntos/logo_udg-gris.png)

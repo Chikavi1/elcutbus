@@ -1,4 +1,5 @@
-## app diseñada por los alumnos
+![udg](http://www.cusur.udg.mx/es/sites/default/files/adjuntos/logo_udg-gris.png)
+## App diseñada por los alumnos
 
 - Luis Rojas
 - Aaron Real
@@ -7,5 +8,3 @@
 - Jairo Ruelas
 - emanuel lupercio
 - Juan Tapia
-
-![udg](http://www.cusur.udg.mx/es/sites/default/files/adjuntos/logo_udg-gris.png)

@@ -111,11 +111,11 @@ export class RutaPage {
 	   if(this.compartirubicacion){
 	     console.log("se activo la funcion de compartir ubicacion");
 	     this.agregarUbicacion();
-	     this.valorboton = "eliminar ubicacion";
+	     this.valorboton = "eliminar ubicación";
 	   }else{
 	     console.log("funcion eliminar activada,se elimino");
 	   	 this.eliminarUbicacion();
-	   	 this.valorboton = "compartir ubicacion";
+	   	 this.valorboton = "compartir ubicación";
 	   }
  }
 

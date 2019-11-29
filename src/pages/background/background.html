@@ -1,0 +1,63 @@
+
+
+<ion-content fullscreen style="z-index: 2;" >
+	<agm-map [styles]="styles" [disableDefaultUI]="false" [rotateControl]="true"
+ [latitude]="latitudInicial" [zoomControl]="false" [longitude]="longitudInicial" [minZoom]="11" [maxZoom]="18" [zoom]="14" style="position: relative;top:-5em;max-height: auto;" [streetViewControl]="false">
+    <agm-marker [latitude]="latitudCutonala" [longitude]="longitudCutonala" 
+    [iconUrl]="cut"
+    >
+       <agm-info-window #window [disableAutoPan]="true" >
+     <p><b>Bienvenido al Cutonala</b></p>
+    </agm-info-window>
+    </agm-marker>
+
+  <agm-marker 
+  	 [latitude]="locationTracker.lat" [longitude]="locationTracker.lng" 
+    [iconUrl]="icon"
+    >
+    </agm-marker>
+
+</agm-map>
+
+
+    <div >
+  
+  <div text-center>
+  	<div style="width: 4em;height: 4px;background: #a0a0a0;top:-5em;left: 43%;position: relative;" text-center></div>
+  	 <h4 style="top:-3em;position: relative;">¡Hola, {{nombre}}!</h4>
+    <ion-row>
+       <ion-col>
+        <ion-icon name="person" style="zoom:2.32;"></ion-icon>
+        <p><strong>{{locationTracker.lat}}</strong></p>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="bus" style="zoom:2.32;"></ion-icon>
+        <p><strong>{{locationTracker.lng}}</strong></p>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="time" style="zoom:2.32;"></ion-icon>
+        <p><strong></strong></p>
+      </ion-col>
+    </ion-row>
+  <p>foreground {{locationTracker.countFor}}</p>
+  <p>background {{locationTracker.countBack}}</p>
+  </div>
+</div>
+
+<ion-row>
+  <ion-col>
+      <button ion-button full primary (click)="start()">Compartir ubicacion</button>
+  </ion-col>
+  <ion-col>
+      <button ion-button full primary (click)="stop()">Parar Ubicacion</button>
+  </ion-col>
+</ion-row>
+  
+  <ion-row padding >
+        <ion-col>
+            <p style="color:red;text-align: center !important;" >Reportar</p>
+        </ion-col>
+  </ion-row>
+</ion-content>

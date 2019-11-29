@@ -1,0 +1,46 @@
+<!--
+  Generated template for the FormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header translucent="true" no-border>
+  <ion-navbar  style="background: #f5f9fd;"  transparent hide-nav-bar="true">
+  	 	<ion-buttons end>
+      <button ion-button   
+          (click)="closeModal()">
+         <p style="color: red;">Cancelar</p>      
+      </button>
+    </ion-buttons>
+    <ion-title>Enviar ubicación</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+	<p text-center><b> Gracias por ayudar a la comunidad a encontrar un camión.</b></p>
+
+		<form (ngSubmit)="enviar()" #registerForm="ngForm">
+		 <ion-item style="background: #f5f9fd;">
+              <ion-label><ion-icon name="bus"></ion-icon></ion-label>
+              <ion-input  style="background: #f5f9fd;" type="text" placeholder="modelo" name="modelo" [(ngModel)]="modelo"  required></ion-input>
+      </ion-item>
+		  
+       <ion-item style="background: #f5f9fd;">
+    <ion-label>Ruta</ion-label>
+    <ion-select [(ngModel)]="ruta" name="ruta">
+      <ion-option value="644-B">644-B</ion-option>
+      <ion-option value="615">615</ion-option>
+      <ion-option value="C-98">C-98</ion-option>
+    </ion-select>
+  </ion-item>
+
+      <ion-row padding>
+        <button  ion-button color="home" class="submit-btn" full round  type="submit" [disabled]="!registerForm.form.valid">Enviar ubicación</button>
+      </ion-row> 
+  		</form>
+
+
+    <div class="wrapper">
+  <div class="wave"></div>
+</div>
+</ion-content>
